@@ -21,6 +21,20 @@ CREATE TABLE `students` (
   PRIMARY KEY (`id`),
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
+create table detalcoursesstudents
+(
+    id        int auto_increment
+        primary key,
+    idStudent int not null,
+    isCourse  int not null,
+    constraint detalcoursesstudents_ibfk_1
+        foreign key (isCourse) references courses (id)
+            on update cascade,
+    constraint detalcoursesstudents_ibfk_2
+        foreign key (idStudent) references students (id)
+            on update cascade
+);
+
 
 -- INSERT ---
 INSERT INTO students (name, lastName, age) 
