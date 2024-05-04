@@ -49,7 +49,7 @@ public class EstudentServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("application/json");
+        /*response.setContentType("application/json");
         try {
             if(request.getParameter("id") == null) {
                 ArrayList<Student> listStudents = (ArrayList<Student>) cnn.getStudent();
@@ -61,8 +61,15 @@ public class EstudentServlet extends HttpServlet {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
+        response.setContentType("text/html");
+
+        // Hello
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>" + "Este es un texto*******" + "</h1>");
+        out.println("</body></html>");
 
     }
 
