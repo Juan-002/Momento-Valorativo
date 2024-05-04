@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "/students")
 public class HelloServlet extends HttpServlet {
     private ConexionMySql cnn;
     private GsonBuilder gsonBuilder;

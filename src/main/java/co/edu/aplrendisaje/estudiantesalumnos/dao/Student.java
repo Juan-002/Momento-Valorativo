@@ -18,13 +18,13 @@ public class Student {
         this.id = id;
         this.name = name;
     }
-   /* public List<Course> getCourse() {
+    public List<Course> getCourse() {
         return course;
     }
 
     public void setCourse(List<Course> course) {
         this.course = course;
-    }*/
+    }
 
     public int getId() {
         return id;

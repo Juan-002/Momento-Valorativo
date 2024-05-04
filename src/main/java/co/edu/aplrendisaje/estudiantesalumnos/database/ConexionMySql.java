@@ -54,7 +54,7 @@ public class ConexionMySql {
                 student.setCreateAT(result.getDate("createdAT"));
                 student.setUpdateAT(result.getDate("updatedAT"));
                 student.setDeleteAT(result.getDate("deletedAT"));
-                //student.setCourse(this.getCourse(student.getId()));
+                student.setCourse(this.getCourse(student.getId()));
                 students.add(student);
             }
 

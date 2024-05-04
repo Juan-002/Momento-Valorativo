@@ -5,15 +5,18 @@ import co.edu.aplrendisaje.estudiantesalumnos.database.ConexionMySql;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
-
-@WebServlet(name = "estudentServlet", value = "/Students")
-public class EstudentServlet extends HttpServlet {
+@WebServlet(name = "StudentsAverageAge", value = "/students-average-age")
+public class StudentsSverageAgeServlet extends HttpServlet {
     private ConexionMySql cnn;
     private GsonBuilder gsonBuilder;
     private Gson gson;
@@ -29,10 +32,20 @@ public class EstudentServlet extends HttpServlet {
         try {
             if(request.getParameter("id") == null) {
                 ArrayList<Student> listStudents = (ArrayList<Student>) cnn.getStudent();
+                ArrayList<Student> listStudentsAverageAge=new ArrayList<Student>();
+                float averageAge=0;
+                for (int i = 0; i < listStudents.size(); i++) {
+                    averageAge+=listStudents.get(i).getAge();
+                }
+                averageAge=averageAge/listStudents.size();
+                for (int i = 0; i < listStudents.size(); i++) {
+                    if(listStudents.get(i).getAge()>averageAge){
+                        listStudentsAverageAge.add(listStudents.get(i));
+                    }
+                }
                 PrintWriter out = response.getWriter();
-                out.print(gson.toJson(listStudents));
+                out.print(gson.toJson(listStudentsAverageAge));
                 out.flush();
-                // Hello
 
             }else{
 

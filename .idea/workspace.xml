@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e61a2a-3e0f-492d-ac24-9652d2fef5e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/aplrendisaje/estudiantesalumnos/Servlet/StudentsSverageAgeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/aplrendisaje/estudiantesalumnos/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/aplrendisaje/estudiantesalumnos/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/aplrendisaje/estudiantesalumnos/Servlet/EstudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/aplrendisaje/estudiantesalumnos/Servlet/EstudentServlet.java" afterDir="false" />
@@ -76,6 +77,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="co.edu.aplrendisaje.estudiantesalumnos.Servlet" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.86" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.86" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -183,7 +189,7 @@
       <updated>1714778004421</updated>
       <workItem from="1714778005482" duration="3398000" />
       <workItem from="1714782196066" duration="1469000" />
-      <workItem from="1714785857246" duration="13790000" />
+      <workItem from="1714785857246" duration="15229000" />
     </task>
     <servers />
   </component>
