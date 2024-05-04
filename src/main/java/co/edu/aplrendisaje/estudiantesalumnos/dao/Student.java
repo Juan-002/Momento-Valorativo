@@ -2,6 +2,8 @@ package co.edu.aplrendisaje.estudiantesalumnos.dao;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
+
 public class Student {
     private int id;
     private String name;
@@ -10,10 +12,18 @@ public class Student {
     private Date createdAT;
     private Date updatedAT;
     private Date deletedAT;
+    private List<Course> course;
 
     public Student() {
-        this.id = id;
-        this.name = name;
+
+    }
+
+    public List<Course> getCourse() {
+        return course;
+    }
+
+    public void setCourse(List<Course> course) {
+        this.course = course;
     }
 
     public int getId() {

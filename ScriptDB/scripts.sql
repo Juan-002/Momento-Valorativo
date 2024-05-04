@@ -40,4 +40,6 @@ VALUES
     ('Física', 'Profesor Gómez', 'Curso avanzado de física teórica.');
 	
 	
+SELECT s.*,c.name_course FROM students as s INNER JOIN detalcoursesstudents AS d on s.id = d.idStudent INNER JOIN courses AS c ON c.id = d.isCourse;
+	
 	
